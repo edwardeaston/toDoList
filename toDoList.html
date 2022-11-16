@@ -3,9 +3,10 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title></title>
+    <title>Eddie's To-Do List</title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!--Style Sheets-->
     <link rel="stylesheet" href="assets\stylesheets\toDoList.css" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
@@ -15,6 +16,51 @@
     />
   </head>
   <body>
+    <!--Website Banner-->
+    <div class="header-banner">
+      <h1>Eddie's To-Do List</h1>
+    </div>
+    <!--Input Box-->
+    <div class="toDoInput">
+      <label for="toDoItem">I need to: </label>
+      <input type="text" id="toDoItem" name="toDoItem" />
+      <button class="add-button" type="button">
+        <img src="" alt="add item button" />
+      </button>
+    </div>
+    <!--List Box-->
+    <div class="list-container">
+      <ul class="list-class">
+        <div class="list-row">
+          <button class="remove-button" type="button">
+            <img src="" alt="remove item button" />
+          </button>
+          <li class="list-element">Workout</li>
+          <button class="check-button" type="'button">
+            <img src="" alt="check item button" />
+          </button>
+        </div>
+        <div class="list-row">
+          <button class="remove-button" type="button">
+            <img src="" alt="remove item button" />
+          </button>
+          <li class="list-element">Clean</li>
+          <button class="check-button" type="'button">
+            <img src="" alt="check item button" />
+          </button>
+        </div>
+        <div class="list-row">
+          <button class="remove-button" type="button">
+            <img src="" alt="remove item button" />
+          </button>
+          <li class="list-element">Build To-Do List</li>
+          <button class="check-button" type="'button">
+            <img src="" alt="check item button" />
+          </button>
+        </div>
+      </ul>
+    </div>
+    <!--Javascripts-->
     <script src="assets\scripts\toDoList.js" async defer></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
