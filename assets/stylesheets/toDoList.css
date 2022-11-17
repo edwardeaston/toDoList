@@ -1,1 +1,111 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*Banners and Headers*/
+.header-banner {
+  display: flex;
+  justify-content: center;
+  background-color: silver;
+  margin: 0 auto;
+}
+header {
+  height: auto;
+  width: auto;
+}
+
+header h1 {
+  color: black;
+}
+
+/*Input Box*/
+.toDoInput {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  max-width: 80%;
+  margin: 1% auto;
+  border: solid black 3px;
+  background-color: aquamarine;
+}
+
+#toDoItem {
+  font-size: 2em;
+}
+
+input {
+  width: 70%;
+  min-height: fit-content;
+}
+
+/*List*/
+.list {
+  display: flex;
+  align-items: center;
+}
+
+.list-container {
+  width: 80%;
+  min-height: fit-content;
+  margin: 1% auto;
+  padding: 0%;
+  border: solid black 3px;
+  background-color: aqua;
+}
+
+.list-row {
+  background-color: bisque;
+  min-height: fit-content;
+  display: flex;
+  justify-content: space-around;
+  margin: 1% auto;
+}
+
+.list-element {
+  background-color: blueviolet;
+  font-size: 2em;
+  display: inline-block;
+  vertical-align: top;
+  width: 90%;
+  min-height: fit-content;
+}
+
+/*Buttons*/
+button {
+  border: 0;
+  background: none;
+  margin: 0 auto;
+}
+
+.list-row button {
+  overflow: auto;
+  display: inline-block;
+  width: auto;
+  height: auto;
+}
+
+.add-button .check-button {
+  position: absolute;
+  vertical-align: auto;
+}
+.remove-button {
+  position: static;
+  vertical-align: auto;
+}
+
+/* Icons */
+.bi-check-square {
+  font-size: 2em;
+  color: slateblue;
+}
+.bi-plus-square {
+  font-size: 2em;
+  color: green;
+}
+.bi-x-square {
+  font-size: 2em;
+  color: red;
+}
