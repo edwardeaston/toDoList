@@ -1,4 +1,5 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+@import url("https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono&display=swap");
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -6,10 +7,15 @@
 }
 
 /*Banners and Headers*/
+.header-banner,
+header,
+h1 {
+  background-color: #c0ded9;
+}
+
 .header-banner {
   display: flex;
   justify-content: center;
-  background-color: silver;
   margin: 0 auto;
 }
 header {
@@ -18,27 +24,39 @@ header {
 }
 
 header h1 {
-  color: black;
+  color: #b2c2bf;
+  -webkit-text-stroke: 1px #3b3a30;
+  text-shadow: 2px 2px #3b3a30;
+  font-family: "Space Mono", monospace;
+  font-size: 47px;
 }
 
 /*Input Box*/
+.toDoInput,
+.list-container,
+footer {
+  background-color: eaece5;
+}
+
 .toDoInput {
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  align-content: flex-end;
+  justify-content: space-evenly;
   max-width: 80%;
-  margin: 1% auto;
-  border: solid black 3px;
-  background-color: aquamarine;
+  margin: 3% auto;
+  border: solid #3b3a30 1px;
+  background-color: #b2c2bf;
 }
 
 #toDoItem {
-  font-size: 2em;
+  width: 80%;
+  min-height: fit-content;
 }
 
-input {
-  width: 70%;
-  min-height: fit-content;
+label {
+  font-size: 2em;
+  font-family: "Roboto", sans-serif;
+  vertical-align: bottom;
 }
 
 /*List*/
@@ -51,38 +69,34 @@ input {
   width: 80%;
   min-height: fit-content;
   margin: 1% auto;
-  padding: 0%;
-  border: solid black 3px;
-  background-color: aqua;
+  padding: 1%;
 }
 
 .list-row {
-  background-color: bisque;
   min-height: fit-content;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin: 1% auto;
 }
 
 .list-element {
-  background-color: blueviolet;
+  background-color: #c0ded9;
   font-size: 2em;
+  font-family: "Roboto", sans-serif;
   display: inline-block;
   vertical-align: top;
   width: 90%;
   min-height: fit-content;
+  border: solid #3b3a30 3px;
 }
 
 /*Buttons*/
 button {
+  display: inline-block;
   border: 0;
   background: none;
   margin: 0 auto;
-}
-
-.list-row button {
   overflow: auto;
-  display: inline-block;
   width: auto;
   height: auto;
 }
