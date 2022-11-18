@@ -79,7 +79,8 @@ label {
   margin: 1% auto;
 }
 
-.list-element {
+.list-element,
+.element-checked {
   background-color: #c0ded9;
   font-size: 2em;
   font-family: "Roboto", sans-serif;
@@ -88,6 +89,10 @@ label {
   width: 90%;
   min-height: fit-content;
   border: solid #3b3a30 3px;
+}
+
+.element-checked {
+  text-decoration: line-through;
 }
 
 /*Buttons*/

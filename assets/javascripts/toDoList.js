@@ -1,23 +1,47 @@
-let shoppingList = ["poptarts", "ramen noodles", "chips", "salsa", "coffee"];
+// Query Shorthand
+let q = document.querySelector.bind(document);
+let qa = document.querySelectorAll.bind(document);
 
-shoppingList.push("fruit loops");
+// Establish HTML element variables
+let listRow = q("div.list-row");
+let itemInput = q("input");
+let listElement = q("li.list-element");
+let list = qa("li");
+let toDoList = Array.from(list);
+let listContainer = q("ul.list-container");
 
-shoppingList.splice(4, 1, "fair trade coffee");
+let addButton = q("button.add-button");
+let removeButton = q("button.remove-button");
+let checkButton = q("button.check-button");
 
-shoppingList.splice(2, 2, "rice", "beans");
+console.log(listElement.innerHTML);
 
-let shoppingCart = [];
+listElement.innerHTML = "cleaning";
 
-shoppingCart.push(shoppingList.pop());
+let newItem = document.createElement(listRow);
+newItem.listElement.innerHTML = "newItem";
 
-shoppingCart.push(shoppingList.shift());
+listContainer.appendChild(newItem); //Insert after item 1
 
-while (shoppingList.length > 0) {
-  shoppingCart.push(shoppingList.pop());
-}
+// establish js variables
 
-shoppingCart.sort().reverse();
+// function addItem(item) {
+//   return toDoObject;
+// }
 
-console.log("Shopping List: " + shoppingList);
+// // function removeItem(item) {
+// //   let findItem = toDoArray.indexOf(item);
+// //   toDoArray[findItem].pop();
+// //   buildList;
+// //   return toDoObject;
+// // }
 
-console.log("Shopping Cart: " + shoppingCart);
+// addItem("Workout");
+
+// addItem("Clean");
+
+// let findItem = toDoArray.indexOf("Workout");
+
+// console.log("To Do: " + toDoObject.toDoList);
+
+// console.log(toDoArray[0]);
