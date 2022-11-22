@@ -1,37 +1,104 @@
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&family=Space+Mono&display=swap");
+
+:root {
+  --dark: #16213e;
+  --blue: #0f3460;
+  --purple: #533483;
+  --red: #e94560;
+  --gray: #3f4961;
+  --light: #f5f5f5;
+  --gold: #946f16;
+}
+
 * {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
 }
 
-/*Banners and Headers*/
-.header-banner,
-header,
-h1 {
-  background-color: #c0ded9;
-}
-
-.header-banner {
+body {
   display: flex;
-  justify-content: center;
-  margin: 0 auto;
+  flex-direction: column;
+  min-height: 100vh;
+  background: var(--gray);
+  color: var(--light);
 }
+
 header {
-  height: auto;
-  width: auto;
+  padding: 2rem 1rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
 }
 
 header h1 {
-  color: #b2c2bf;
-  -webkit-text-stroke: 1px #3b3a30;
-  text-shadow: 2px 2px #3b3a30;
+  display: flex;
+  text-shadow: 3px 3px var(--dark);
   font-family: "Space Mono", monospace;
-  font-size: 47px;
+  font-size: 2rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+  justify-content: center;
 }
 
-/*Input Box*/
+#task-form {
+  display: flex;
+}
+
+input,
+button {
+  appearance: none;
+  border: none;
+  outline: none;
+  background: none;
+}
+
+#task-input {
+  flex: 1 1 0%;
+  background-color: var(--dark);
+  padding: 1rem;
+  border-radius: 1rem;
+  color: var(--light);
+  font-size: 1.25rem;
+}
+
+#add-button:hover {
+  opacity: 0.6;
+}
+
+#add-button:active {
+  color: var(--light);
+}
+
+main {
+  flex: 1 1 0%;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.task-list {
+  padding: 1rem;
+}
+
+#tasks .task {
+  display: flex;
+  justify-content: space-around;
+  background-color: var(--blue);
+  padding: 1rem;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+#tasks .task .content .text {
+  color: var(--light);
+  font-size: 1.125rem;
+  width: 100%;
+  display: block;
+}
+
+/*Input Box
 .toDoInput,
 .list-container,
 footer {
@@ -53,13 +120,7 @@ footer {
   min-height: fit-content;
 }
 
-label {
-  font-size: 2em;
-  font-family: "Roboto", sans-serif;
-  vertical-align: bottom;
-}
-
-/*List*/
+/*List
 .list {
   display: flex;
   align-items: center;
@@ -83,7 +144,6 @@ label {
 .element-checked {
   background-color: #c0ded9;
   font-size: 2em;
-  font-family: "Roboto", sans-serif;
   display: inline-block;
   vertical-align: top;
   width: 90%;
@@ -94,8 +154,9 @@ label {
 .element-checked {
   text-decoration: line-through;
 }
+*/
 
-/*Buttons*/
+/*Buttons
 button {
   display: inline-block;
   border: 0;
@@ -114,8 +175,9 @@ button {
   position: static;
   vertical-align: auto;
 }
+*/
 
-/* Icons */
+/* Icons
 .bi-check-square {
   font-size: 2em;
   color: slateblue;
@@ -128,3 +190,4 @@ button {
   font-size: 2em;
   color: red;
 }
+*/
