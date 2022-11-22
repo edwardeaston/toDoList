@@ -1,34 +1,44 @@
-// establish variables
-let toDoArray = [];
-let toDoObject = { toDoList: toDoArray };
+// Initial Rough Draft of Javascript
+// // Establish HTML element variables
+// let listRow = q("div.list-row");
+// let itemInput = q("input");
+// let listElement = q("li.list-element");
+// let list = qa("li");
+// let toDoList = Array.from(list);
+// let listContainer = q("ul.list-container");
 
-// create iterate function to evaluate and build list
-function buildList() {
-  toDoArray.forEach(function (item, index) {
-    toDoObject[index] = item;
-    return toDoObject;
-  });
-}
+// let addButton = q("button.add-button");
+// let removeButton = q("button.remove-button");
+// let checkButton = q("button.check-button");
 
-function addItem(item) {
-  toDoArray.push(item);
-  buildList();
-  return toDoObject;
-}
+// console.log(listElement.innerHTML);
 
-// function removeItem(item) {
-//   let findItem = toDoArray.indexOf(item);
-//   toDoArray[findItem].pop();
-//   buildList;
+// listElement.innerHTML = "cleaning";
+
+// let newItem = document.createElement(listRow);
+// newItem.listElement.innerHTML = "newItem";
+
+// listContainer.appendChild(newItem); //Insert after item 1
+
+// establish js variables
+
+// function addItem(item) {
 //   return toDoObject;
 // }
 
-addItem("Workout");
+// // function removeItem(item) {
+// //   let findItem = toDoArray.indexOf(item);
+// //   toDoArray[findItem].pop();
+// //   buildList;
+// //   return toDoObject;
+// // }
 
-addItem("Clean");
+// addItem("Workout");
 
-let findItem = toDoArray.indexOf("Workout");
+// addItem("Clean");
 
-console.log("To Do: " + toDoObject.toDoList);
+// let findItem = toDoArray.indexOf("Workout");
 
-console.log(toDoArray[0]);
+// console.log("To Do: " + toDoObject.toDoList);
+
+// console.log(toDoArray[0]);

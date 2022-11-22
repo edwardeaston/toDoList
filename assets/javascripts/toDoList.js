@@ -2,46 +2,65 @@
 let q = document.querySelector.bind(document);
 let qa = document.querySelectorAll.bind(document);
 
-// Establish HTML element variables
-let listRow = q("div.list-row");
-let itemInput = q("input");
-let listElement = q("li.list-element");
-let list = qa("li");
-let toDoList = Array.from(list);
-let listContainer = q("ul.list-container");
+// Scripts
+window.addEventListener("load", () => {
+  const form = q("#task-form");
+  const input = q("#task-input");
+  const list_el = q("#tasks");
 
-let addButton = q("button.add-button");
-let removeButton = q("button.remove-button");
-let checkButton = q("button.check-button");
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
-console.log(listElement.innerHTML);
+    const task = input.value;
 
-listElement.innerHTML = "cleaning";
+    if (!task) {
+      alert("Please fill out the task");
+      return;
+    }
 
-let newItem = document.createElement(listRow);
-newItem.listElement.innerHTML = "newItem";
+    const task_el = document.createElement("div");
+    task_el.classList.add("task");
 
-listContainer.appendChild(newItem); //Insert after item 1
+    const task_content_el = document.createElement("div");
+    task_content_el.classList.add("content");
 
-// establish js variables
+    const task_text_el = document.createElement("p");
+    task_text_el.classList.add("text");
+    task_text_el.innerHTML = task;
 
-// function addItem(item) {
-//   return toDoObject;
-// }
+    const task_remove_el = document.createElement("div");
+    task_remove_el.classList.add("remove");
 
-// // function removeItem(item) {
-// //   let findItem = toDoArray.indexOf(item);
-// //   toDoArray[findItem].pop();
-// //   buildList;
-// //   return toDoObject;
-// // }
+    const task_check_el = document.createElement("div");
+    task_check_el.classList.add("check");
 
-// addItem("Workout");
+    const remove_button_el = document.createElement("button");
+    remove_button_el.classList.add("remove-button");
+    remove_button_el.innerHTML = `<i class="bi bi-x-square"></i>`;
 
-// addItem("Clean");
+    const check_button_el = document.createElement("button");
+    check_button_el.classList.add("check-button");
+    check_button_el.innerHTML = `<i class="bi bi-check-square"></i>`;
 
-// let findItem = toDoArray.indexOf("Workout");
+    task_remove_el.appendChild(remove_button_el);
 
-// console.log("To Do: " + toDoObject.toDoList);
+    task_content_el.appendChild(task_text_el);
 
-// console.log(toDoArray[0]);
+    task_check_el.appendChild(check_button_el);
+
+    task_el.append(task_remove_el, task_content_el, task_check_el);
+
+    list_el.appendChild(task_el);
+
+    input.value = "";
+
+    check_button_el.addEventListener("click", () => {
+      task_text_el.classList.toggle("checked");
+      console.log(task_text_el.outerHTML);
+    });
+
+    remove_button_el.addEventListener("click", () => {
+      list_el.removeChild(task_el);
+    });
+  });
+});

@@ -64,6 +64,14 @@ button {
   font-size: 1.25rem;
 }
 
+button {
+  cursor: pointer;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  font-size: 1.47rem;
+}
+
 button:hover {
   opacity: 0.8;
   cursor: pointer;
@@ -84,20 +92,29 @@ main {
   padding: 1rem;
 }
 
-#tasks .task,
-.task-checked {
+#tasks .task {
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
 }
 
-#tasks .task .content,
-.task-checked .content {
+#tasks .task .content {
   flex: 1 1 0%;
   background-color: var(--blue);
   opacity: 0.95;
   border-radius: 1rem;
   padding: 0.3rem;
+  order: 2;
+}
+
+#tasks .task .remove {
+  order: 1;
+  margin: 0 0.3rem;
+}
+
+#tasks .task .check {
+  order: 3;
+  margin: 0 0.3rem;
 }
 
 #tasks .task .content .text {
@@ -110,7 +127,7 @@ main {
   margin-left: 1rem;
 }
 
-#tasks .task-checked .content .text {
+#tasks .task .content .text.checked {
   color: var(--gray);
   font-size: 1.5rem;
   font-weight: 100;
@@ -122,27 +139,14 @@ main {
   opacity: 0.5;
 }
 
-#tasks .task .actions,
-.task-checked .actions {
-  display: flex;
-  align-content: middle;
-  margin: 0 0.3rem;
-}
-
-button {
-  cursor: pointer;
-  margin: 0 auto;
-  width: auto;
-  height: auto;
-  font-size: 1.47rem;
-}
-
-.bi-check-square {
-  color: var(--purple);
-}
-.bi-plus-square {
+#task-form #add-button .bi-plus-square {
   color: var(--gold);
 }
-.bi-x-square {
+
+#tasks .task .remove .remove-button .bi-x-square {
   color: var(--red);
+}
+
+#tasks .task .check .check-button .bi-check-square {
+  color: var(--purple);
 }
