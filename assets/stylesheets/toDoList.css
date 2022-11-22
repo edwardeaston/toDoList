@@ -34,10 +34,9 @@ header {
 
 header h1 {
   display: flex;
-  text-shadow: 2px 2px var(--gray);
-  font-family: "Space Mono", monospace;
+  text-shadow: 1.5px 1.5px var(--gray);
   font-size: 2rem;
-  font-weight: 600;
+  font-weight: 500;
   opacity: 0.9;
   margin-bottom: 2rem;
   justify-content: center;
@@ -111,10 +110,6 @@ main {
   margin-left: 1rem;
 }
 
-#tasks .task-checked .content {
-  background-color: var(--blue);
-}
-
 #tasks .task-checked .content .text {
   color: var(--gray);
   font-size: 1.5rem;
@@ -124,6 +119,7 @@ main {
   width: 100%;
   display: block;
   margin-left: 1rem;
+  opacity: 0.5;
 }
 
 #tasks .task .actions,
@@ -150,45 +146,3 @@ button {
 .bi-x-square {
   color: var(--red);
 }
-
-/*
-.element-checked {
-  text-decoration: line-through;
-}
-*/
-
-/*Buttons
-button {
-  display: inline-block;
-  border: 0;
-  background: none;
-  margin: 0 auto;
-  overflow: auto;
-  width: auto;
-  height: auto;
-}
-
-.add-button .check-button {
-  position: absolute;
-  vertical-align: auto;
-}
-.remove-button {
-  position: static;
-  vertical-align: auto;
-}
-*/
-
-/* Icons
-.bi-check-square {
-  font-size: 2em;
-  color: slateblue;
-}
-.bi-plus-square {
-  font-size: 2em;
-  color: green;
-}
-.bi-x-square {
-  font-size: 2em;
-  color: red;
-}
-*/
