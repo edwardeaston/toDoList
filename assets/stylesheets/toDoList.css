@@ -21,7 +21,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background: var(--gray);
+  background: var(--dark);
   color: var(--light);
 }
 
@@ -34,10 +34,11 @@ header {
 
 header h1 {
   display: flex;
-  text-shadow: 3px 3px var(--dark);
+  text-shadow: 2px 2px var(--gray);
   font-family: "Space Mono", monospace;
   font-size: 2rem;
-  font-weight: 400;
+  font-weight: 600;
+  opacity: 0.9;
   margin-bottom: 2rem;
   justify-content: center;
 }
@@ -47,6 +48,7 @@ header h1 {
 }
 
 input,
+p,
 button {
   appearance: none;
   border: none;
@@ -56,24 +58,25 @@ button {
 
 #task-input {
   flex: 1 1 0%;
-  background-color: var(--dark);
+  background-color: var(--gray);
   padding: 1rem;
   border-radius: 1rem;
   color: var(--light);
   font-size: 1.25rem;
 }
 
-#add-button:hover {
-  opacity: 0.6;
+button:hover {
+  opacity: 0.8;
+  cursor: pointer;
 }
 
-#add-button:active {
-  color: var(--light);
+button:active {
+  opacity: 0.4;
 }
 
 main {
   flex: 1 1 0%;
-  max-width: 800px;
+  max-width: 600px;
   width: 100%;
   margin: 0 auto;
 }
@@ -82,75 +85,73 @@ main {
   padding: 1rem;
 }
 
-#tasks .task {
+#tasks .task,
+.task-checked {
   display: flex;
-  justify-content: space-around;
-  background-color: var(--blue);
-  padding: 1rem;
-  border-radius: 1rem;
+  align-items: center;
   margin-bottom: 1rem;
 }
 
+#tasks .task .content,
+.task-checked .content {
+  flex: 1 1 0%;
+  background-color: var(--blue);
+  opacity: 0.95;
+  border-radius: 1rem;
+  padding: 0.3rem;
+}
+
 #tasks .task .content .text {
-  color: var(--light);
-  font-size: 1.125rem;
+  color: var(--white);
+  font-size: 1.5rem;
+  font-weight: 100;
+  font-family: "Space Mono", monospace;
   width: 100%;
   display: block;
+  margin-left: 1rem;
 }
 
-/*Input Box
-.toDoInput,
-.list-container,
-footer {
-  background-color: eaece5;
+#tasks .task-checked .content {
+  background-color: var(--blue);
 }
 
-.toDoInput {
+#tasks .task-checked .content .text {
+  color: var(--gray);
+  font-size: 1.5rem;
+  font-weight: 100;
+  text-decoration: line-through;
+  font-family: "Space Mono", monospace;
+  width: 100%;
+  display: block;
+  margin-left: 1rem;
+}
+
+#tasks .task .actions,
+.task-checked .actions {
   display: flex;
-  align-content: flex-end;
-  justify-content: space-evenly;
-  max-width: 80%;
-  margin: 3% auto;
-  border: solid #3b3a30 1px;
-  background-color: #b2c2bf;
+  align-content: middle;
+  margin: 0 0.3rem;
 }
 
-#toDoItem {
-  width: 80%;
-  min-height: fit-content;
+button {
+  cursor: pointer;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  font-size: 1.47rem;
 }
 
-/*List
-.list {
-  display: flex;
-  align-items: center;
+.bi-check-square {
+  color: var(--purple);
+}
+.bi-plus-square {
+  color: var(--gold);
+}
+.bi-x-square {
+  color: var(--red);
 }
 
-.list-container {
-  width: 80%;
-  min-height: fit-content;
-  margin: 1% auto;
-  padding: 1%;
-}
-
-.list-row {
-  min-height: fit-content;
-  display: flex;
-  justify-content: space-between;
-  margin: 1% auto;
-}
-
-.list-element,
-.element-checked {
-  background-color: #c0ded9;
-  font-size: 2em;
-  display: inline-block;
-  vertical-align: top;
-  width: 90%;
-  min-height: fit-content;
-  border: solid #3b3a30 3px;
-}
-
+/*
 .element-checked {
   text-decoration: line-through;
 }
